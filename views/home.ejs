@@ -1,0 +1,15 @@
+    <%- include('header') %>
+        <h2>Open roles:</h2>
+        <hr>
+        <% categorias.forEach( categoria => { %>
+            <div class="divhome">
+                <h3><%- categoria.categoria %></h3>
+                <ul>
+                    <% categoria.vagas.forEach( vaga => { %> 
+                    <li><a href="vaga/<%- vaga.id %>">➤ <%- vaga.titulo %></a></li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }) %>
+        <%- include('footer') %>
+        
